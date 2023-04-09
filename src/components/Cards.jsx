@@ -31,7 +31,7 @@ function Cards() {
                 viewport={{ once: false, amount: 0.25 }}
                 className={`${styles.innerWidth} `}
             >
-                <div className='mx-auto flex lg:flex-row flex-col  ' >
+                <div className='mx-auto flex md:flex-row flex-col  ' >
                     <div className='flex-1'>
                         <motion.div
                             variants={fadeIn('right', 'tween', 0.2, 1)}
@@ -58,7 +58,7 @@ function Cards() {
                             </div>
                             <div className='font-bold mt-5 p-3'>
                                 {mentors[currentIndex].details}</div>
-                            <div className='hidden   text-yellow-400 lg:flex justify-center items-center  '>
+                            <div className='hidden   text-yellow-400 md:flex justify-center items-center  '>
                                
                                     <img src={ArrowRight} alt="" onClick={prevSlide} className="cursor-pointer" />
                                     {currentIndex} / {mentors.length}

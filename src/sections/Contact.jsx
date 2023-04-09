@@ -1,15 +1,17 @@
 import React from "react";
-import fb from "../assets/fb.png";
-import lin from "../assets/in.png";
-import insta from "../assets/insta.png";
-import path from "../assets/map.png";
+import { socials } from "../constants/data";
 import sub from "../assets/submit.png";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
+import { HashLink as Link } from "react-router-hash-link";
+import { BrowserRouter } from "react-router-dom";
+import ArrowTop from "../assets/ArrowTop.svg"
+import ArrowToRight from "../assets/ArrowToRight.svg"
 
 function Contact() {
   return (
-    <div className="h-screen w-[100%]">
+    <BrowserRouter>
+    <div className="" id="contact">
       <div className="flex justify-center items-center">
         <motion.nav variants={navVariants} initial="hidden" whileInView="show">
           <div className="flex justify-center items-center">
@@ -34,46 +36,24 @@ function Contact() {
       <div className="flex md:pl-20 pl-10 text-white ">
         <div className="flex-1">
           <ul className="space-y-6 md:text-[22px] text-[18px] py-10 text-[#FFFFFF37] font-medium">
-            <li className="flex ">
-              {" "}
-              <a href="" className="flex md:gap-7 gap-3">
-                {" "}
-                <img
-                  src={insta}
-                  alt=""
-                  className="h-[30px] w-[30px] mt-1"
-                />{" "}
-                <p className="">School of ai bejaia</p>{" "}
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href="" className="flex md:gap-7 gap-3 ">
-                {" "}
-                <img src={lin} alt="" className="h-[30px] w-[30px] mt-1" />{" "}
-                <p>School of ai bejaia</p>{" "}
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href="" className="flex md:gap-7 gap-3 ">
-                {" "}
-                <img src={fb} alt="" className="h-[30px] w-[30px] mt-1" />{" "}
-                <p>School of ai bejaia</p>{" "}
-              </a>{" "}
-            </li>
-            <li>
-              {" "}
-              <a href="" className="flex md:gap-7 gap-3 ">
-                {" "}
-                <img
-                  src={path}
-                  alt=""
-                  className="h-[30px] w-[30px] mt-1"
-                />{" "}
-                <p>School of ai bejaia</p>{" "}
-              </a>{" "}
-            </li>
+          {socials.map((social) => (
+
+                    <li className="flex cursor-pointer  ">     
+                    <a href={social.url} className="flex gap-3"> 
+                      <img
+                        src={social.image}
+                        alt={social.name}
+                        className=""
+                      />
+                      <p className="">{social.name}</p>
+
+                    </a>
+                  </li>
+      ))}
+                            {/* <Link to="//www.instagram.com/soai_bejaia/">test</Link>
+                      <Link to="//www.instagram.com/soai_bejaia/">test</Link> */}
+
+ 
           </ul>
         </div>
         <div className="flex-1">
@@ -83,21 +63,27 @@ function Contact() {
               placeholder="Email address"
               className="border-b-2 border-white bg-transparent w-[90%] py-2 md:text-[25px] focus:outline-none "
             />
-            <div className="flex mr-[5px]">
+            <div className="flex relative  mr-[5px]">
               <input
                 type="text"
                 placeholder="Your text"
                 className="border-b-2 border-white bg-transparent w-[90%] py-2 md:text-[25px] focus:outline-none"
               />
               <button type="submit">
-                {" "}
-                <img src={sub} alt="" className="absolute right-5 " />{" "}
+                <img src={ArrowToRight} alt="" className="absolute top-0 right-[10%] bottom-0 " />
               </button>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <div className="flex justify-center items-center">
+      <Link to='#home'>   
+      <img src={ArrowTop} alt="scrolltop"  className="mb-4"/>
+      </Link>
+  
+    </div>
+    </BrowserRouter>
   );
 }
 

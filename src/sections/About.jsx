@@ -1,6 +1,5 @@
 
-import robot from '../assets/robot.png'
-// import about from '../assets/about.png'
+import robot from '../assets/robota.svg'
 import React from 'react'
 import { motion } from 'framer-motion';
 import styles from '../style';
@@ -9,7 +8,7 @@ import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
 import { navVariants } from '../utils/motion';
 function About() {
   return (
-    <section className={`${styles.padding} relative z-10`}>
+    <section id='about' className={`${styles.padding} relative z-10 mt-10`}>
       <motion.nav
         variants={navVariants}
         initial="hidden"
@@ -38,7 +37,7 @@ function About() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
+        className={`${styles.innerWidth} mx-auto flex md:flex-row flex-col gap-8`}
       >
         <motion.div
           variants={fadeIn('right', 'tween', 0.2, 1)}
@@ -54,12 +53,14 @@ function About() {
 
         <motion.div
           variants={planetVariants('right')}
-          className={`flex-1 ${styles.flexCenter}`}
+          className={`flex-1 ${styles.flexCenter} flex justify-center items-center`}
         >
+          
           <img
             src={robot}
             alt="get-started"
-            className="w-[90%] h-[90%] object-contain"
+            className='ml-[-50px] mt-[-100px] '
+          
           />
         </motion.div>
       </motion.div>

@@ -1,6 +1,5 @@
 import React from "react";
 import About from "./sections/About";
-
 import Mentors from "./sections/Mentors";
 import Agenda from "./sections/Agenda";
 import Navbar from "./sections/Navbar";

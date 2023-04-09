@@ -15,6 +15,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import robot from "../assets/roboto.png";
 function FAQ() {
   return (
+    <section>
     <div className="text-white  container mx-auto ">
       <div className="flex items-center justify-center  mb-10 ">
         <motion.nav variants={navVariants} initial="hidden" whileInView="show">
@@ -35,7 +36,7 @@ function FAQ() {
         <img
           src={robot}
           alt=" "
-          className="md:h-[250px] h-[200px] absolute md:right-[15%] left-0 "
+          className="md:h-[250px] h-[200px] absolute md:right-0 right-0 m"
         />
       </div>
       <div className="hidden items-center md:flex  justify-center w-[70%] h-full sm:py-8 mx-auto">
@@ -175,6 +176,7 @@ function FAQ() {
         </CarouselProvider>
       </div>
     </div>
+    </section>
   );
 }
 

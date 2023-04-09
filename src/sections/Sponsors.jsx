@@ -3,72 +3,62 @@ import saa from "../assets/saa.png";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
 import { navVariants } from "../utils/motion";
+import { sponsors } from "../constants/data";
+import styles from "../style";
+import line1 from '../assets/LineVer.svg'
+import line2 from '../assets/Linehor.svg'
 
-function Sponsor(props) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 1.5,
-        delay: props.delay,
-      }}
-    >
-      <div className="md:flex">
-        <div className="flex md:w-[100%] md:mx-6  gap-3">
-          <img src={saa} alt="" className="md:h-[100px] h-[70px] mb-4" />
-          <h2 className="md:hidden block mt-3 text-[20px]">SAA ASSURANCES</h2>
-        </div>
-        <div>
-          <h2 className="hidden md:block p-6">SAA ASSURANCES</h2>
-          <p className="md:pl-4">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-            asperiores, minima cum vero libero sequi eum velit!
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
+
 function Sponsors() {
   return (
-    <div className=" h-fit overflow-hidden ">
+    <section id='about' className={`${styles.padding} relative z-10 mt-10`}>
       <motion.nav variants={navVariants} initial="hidden" whileInView="show">
         <div className="flex justify-center items-center">
           <div className="relative  h-[80px] w-[200px]">
             <div className="absolute  w-full h-full border-2 border-yellow-400 rounded-rcorners1"></div>
             <div className=" absolute  w-full h-full border-2 border-yellow-400  rounded-special2">
-              <h2 className="font-extrabold pt-2 pl-2 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
+              <h2 className="font-extrabold pt-3 pl-4 text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
                 Sponsors
               </h2>
             </div>
           </div>
         </div>
       </motion.nav>
-      <div className="mt-20 mb-20">
-        <div className="spb  mx-auto text-white flex w-[90%]  gap-10">
-          {" "}
-          <div className="ml-5">
-            <Sponsor delay={0.3} />
-          </div>{" "}
-          <div className="line h-[200%]"></div>
-          <div className="ml-5 md:ml-20">
-            <Sponsor delay={0.5} />
-          </div>
-        </div>
-        <div className=" mx-auto text-white flex w-[90%]  gap-10 mt-6">
-          <div className="ml-5">
-            {" "}
-            <Sponsor delay={0.7} />
-          </div>{" "}
-          <div className="ml-5 md:ml-20">
-            <Sponsor delay={0.9} />
-          </div>
+      
+      <div className="mt-20">
+        <img className="absolute w-[88%] top-[55%]" src={line1} alt="" />
+        <img className=" top-[26%] h-[380px] absolute right-[48%]" src={line2} alt="" />
+        <div className="grid grid-cols-2 gap-6  ">
+          {sponsors.map((sponsor) => (
+                <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 1.5,
+                  delay: 0.1,
+                }}
+              >
+            <div className="mb-20 ml-4 ">
+              <div className="flex flex-row">
+                <div className="flex-1">
+                  <img src={sponsor.image} className="w-[50%]" alt="sponsor imagone " /></div>
+                <div className="flex-1"> <p className="ml-2 md:ml-10 ">{sponsor.name}</p></div>
+              </div>
+              <p className="whitespace-wrap m-1   "> {sponsor.details}</p>
+
+
+            </div>
+            </motion.div>
+
+
+          ))}
+
         </div>
       </div>
+
+
       <p className="text-[#F7D121] text-center mb-5  md:text-[35px] text-[25px] ">
-        {" "}
+
         <Typed
           strings={["BIG THANKS TO OUR SPONSORS"]}
           typeSpeed={20}
@@ -77,7 +67,8 @@ function Sponsors() {
           loop
         />
       </p>
-    </div>
+
+    </section>
   );
 }
 

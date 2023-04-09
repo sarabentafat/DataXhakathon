@@ -6,6 +6,7 @@ import Typed from "react-typed";
 
 function Hero() {
   return (
+    <section id='home'>
     <div className="md:flex grid h-fit md:h-screen w-[100%] md:mt-[100px]">
       <div className=" md:w-[35%]  md:ml-20 mx-auto ml-0 w-[100%]  ">
         <img
@@ -13,16 +14,18 @@ function Hero() {
           alt=""
           className="md:h-[50%] h-[40%]  mt-10  mx-auto "
         />
-        <img src={blur} className="mt-[-70px] ml-12 mx-auto " alt="" />
-        <p className=" mt-[-40px] bg-gradient-to-r from-[#00A9D1] to-[#009861] text-transparent bg-clip-text md:text-[45px] text-[40px] mx-10 md:mx-0 font-bold text-center">
+
+        <img src={blur} className="mt-[-80px] ml-12 mx-auto z-0 " alt="" />
+     
+        <p className=" mt-[-100px] z-40 bg-gradient-to-r from-[#00A9D1] to-[#009861] text-transparent bg-clip-text md:text-[45px] text-[40px] mx-10 md:mx-0 font-bold text-center">
           <Typed
-            strings={[" Make your data experience count"]}
+            strings={[" Make Your Data Experience Count"]}
             typeSpeed={20}
           />
         </p>
       </div>
       <div className="md:py-[15%]">
-        <p className="text-white md:text-[29px] text-[25px] md:px-8 px-3 text-center mb-16">
+        <p className="text-white text-3xl md:px-8 px-3 text-center mb-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -54,6 +57,7 @@ function Hero() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

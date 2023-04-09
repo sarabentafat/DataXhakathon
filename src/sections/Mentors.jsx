@@ -5,6 +5,7 @@ import { navVariants } from '../utils/motion';
 import Cards from '../components/Cards';
 function Mentors() {
     return (
+        <section id='mentors'>
         <div className='max-w-[1400px] w-full m-auto py-16 px-4  text-center'>
             <div className="flex justify-center items-center">
                 <motion.nav
@@ -14,7 +15,7 @@ function Mentors() {
                     className={`${styles.xPaddings}  `}
                 >
 
-                    <div className='flex justify-center items-center mb-[-20px]'>
+                    <div className='flex justify-center items-center mb-[-40px]'>
                         <div className="relative  h-16 w-52">
                             <div className="absolute  w-full h-full border-2 border-yellow-400 rounded-rcorners1"></div>
                             <div className=" absolute  w-full h-full border-2 border-yellow-400  rounded-special2 
@@ -34,6 +35,7 @@ function Mentors() {
 
 
         </div>
+        </section>
     )
 }
 
