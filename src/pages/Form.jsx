@@ -63,7 +63,7 @@ function Test() {
             Add:add
 
         }
-        fetch('https://sheet.best/api/sheets/6d013908-20d3-4aa7-80e8-69791b214db5', {
+        fetch('https://sheet.best/api/sheets/1d7b228b-4fa6-4f15-900a-40ce613ae20a', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -192,14 +192,8 @@ function Test() {
                                     required
                                 />
                             </div>
-
-
-
                         </div>
-
                     </div>
-
-
                 </fieldset>
                 <fieldset className='mt-10' >
                     <div className=' flex justify-center items-center'>
