@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import "../index.css";
+import styles from "../style/style";
 import logo from "../assets/logo.png";
 import menu from "../assets/menu.png";
 import datax from "../assets/5.png";
-import { BrowserRouter } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 const Navbar = () => {
 
@@ -20,10 +19,12 @@ const Navbar = () => {
     { name: "Contact", link: "#contact" },
   ];
   return (
-    <BrowserRouter>
-      <div className=" bg-bgColor z-50 text-white md:fixed w-[100%] md:bg-gradient-to-b from-[#00996664] to-[#00022F] flex justify-between h-24 overflow-hidden mx-auto px-4 hello py-3">
+    
+   <div className="
+">
+      <div className="md:fixed md:top-0 bg-bgColor z-50 text-white w-[100%] md:bg-gradient-to-b from-[#00996664] to-[#00022F] flex justify-between h-24 overflow-hidden mx-auto px-4 hello py-3">
 
-        <Link to='#home'> <img src={logo} alt="" className=" h-20 pt-2" /></Link>
+        <Link to='#home'> <img src={logo} alt="logoSOAI" className=" h-14 mt-1 md:h-16" /></Link>
 
         <ul className="justify-end hidden left-0  gap-8 text-[25px] md:flex mt-4 mr-3">
           {Links.map((link) => (
@@ -34,9 +35,9 @@ const Navbar = () => {
             </div>
           ))}
         </ul>
-        <div onClick={handleNav} className="block  mt-4 md:hidden">
+        <div onClick={handleNav} className={`block  ${styles.padding}   md:hidden`}>
           {nav ? null : (
-            <img src={menu} alt="" className="h-5 cursor-pointer mt-3 " />
+            <img src={menu} alt="menuIcon" className=" cursor-pointer  " />
           )}
         </div>
         <div
@@ -47,15 +48,15 @@ const Navbar = () => {
           }
         >
           <div className="flex ">
-            <img src={datax} alt="" className="h-9 mt-5 ml-5" />
+            <img src={datax} alt="" className="h-9 mt-6 ml-6" />
             <div
               onClick={handleNav}
               className="block absolute right-10 mt-4 md:hidden"
             >
               {nav ? (
                 <AiOutlineClose
-                  size={20}
-                  className="h-5 mt-3 mr-3 fill-green-600 stroke-[20px] cursor-pointer"
+                  size={30}
+                  className="h-5 mt-3 mr-1 fill-green-600 stroke-[20px] cursor-pointer "
                 />
               ) : null}
             </div>
@@ -73,7 +74,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </BrowserRouter>
+      </div>
 
   );
 };

@@ -4,7 +4,7 @@ import ArrowLeft from '../assets/ArrowLeft.svg'
 import ArrowRight from '../assets/ArrowRight.svg'
 
 import { motion } from 'framer-motion';
-import styles from '../style';
+import styles from '../style/style';
 import { staggerContainer, fadeIn } from '../utils/motion';
 function Cards() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,9 +38,9 @@ function Cards() {
                             className="flex-[0.95] flex justify-center flex-col"
                         >
                             <div className='relative  flex justify-center items-center'>
-                                <img src={ArrowRight} alt="" onClick={prevSlide} className="absolute bottom-[50%] left-[7%]  cursor-pointer lg:hidden" />
+                                <img src={ArrowRight} alt="" onClick={prevSlide} className="absolute bottom-[50%] left-[5%]  cursor-pointer lg:hidden" />
                                 <img src={mentors[currentIndex].image} alt={mentors[currentIndex].name} />
-                                <img src={ArrowLeft} alt="" onClick={nextSlide} className="absolute bottom-[50%] right-[10%] cursor-pointer lg:hidden" />
+                                <img src={ArrowLeft} alt="" onClick={nextSlide} className="absolute bottom-[50%] right-[8%] cursor-pointer lg:hidden" />
                             </div>
                         </motion.div>
 

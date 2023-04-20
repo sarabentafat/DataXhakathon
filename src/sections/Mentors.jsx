@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from '../style'
+import styles from '../style/style'
 import { motion } from 'framer-motion';
 import { navVariants } from '../utils/motion';
 import Cards from '../components/Cards';
 function Mentors() {
     return (
-        <section id='mentors'>
+        <section id='mentors' lassName="mb-36" >
         <div className='max-w-[1400px] w-full m-auto py-16 px-4  text-center'>
             <div className="flex justify-center items-center">
                 <motion.nav

@@ -2,13 +2,14 @@
 import robot from '../assets/robota.svg'
 import React from 'react'
 import { motion } from 'framer-motion';
-import styles from '../style';
+import styles from '../style/style';
 import { TypingText } from '../components/CustomTexts'
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
 import { navVariants } from '../utils/motion';
+import starss from '../assets/starss.png'
 function About() {
   return (
-    <section id='about' className={`${styles.padding} relative z-10 mt-10`}>
+    <section id='about' lassName="mb-36"  >
       <motion.nav
         variants={navVariants}
         initial="hidden"

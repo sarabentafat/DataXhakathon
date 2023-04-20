@@ -1,17 +1,16 @@
 import React from "react";
-import saa from "../assets/saa.png";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
 import { navVariants } from "../utils/motion";
 import { sponsors } from "../constants/data";
-import styles from "../style";
+import styles from "../style/style";
 import line1 from '../assets/LineVer.svg'
 import line2 from '../assets/Linehor.svg'
 
 
 function Sponsors() {
   return (
-    <section id='about' className={`${styles.padding} relative z-10 mt-10`}>
+    <section id='sponsors' lassName="mb-36 relative z-10 mt-10"  >
       <motion.nav variants={navVariants} initial="hidden" whileInView="show">
         <div className="flex justify-center items-center">
           <div className="relative  h-[80px] w-[200px]">
@@ -25,10 +24,10 @@ function Sponsors() {
         </div>
       </motion.nav>
       
-      <div className="mt-20">
-        <img className="absolute w-[88%] top-[55%]" src={line1} alt="" />
-        <img className=" top-[26%] h-[380px] absolute right-[48%]" src={line2} alt="" />
-        <div className="grid grid-cols-2 gap-6  ">
+      <div className="mt-20 relative">
+        <img className="absolute w-full  top-[40%]" src={line1} alt="yellowline" />
+        <img className=" absolute top-[-35px] h-[95%]  right-[50%]" src={line2} alt="yellowline" />
+        <div className="grid grid-cols-2 gap-6 md:gap-10 ">
           {sponsors.map((sponsor) => (
                 <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -38,13 +37,16 @@ function Sponsors() {
                   delay: 0.1,
                 }}
               >
-            <div className="mb-20 ml-4 ">
-              <div className="flex flex-row">
-                <div className="flex-1">
-                  <img src={sponsor.image} className="w-[50%]" alt="sponsor imagone " /></div>
-                <div className="flex-1"> <p className="ml-2 md:ml-10 ">{sponsor.name}</p></div>
+            <div className="mb-20 ml-4    ">
+              <div className="flex flex-row  ">
+                <div className="">
+                  <img src={sponsor.image} className=" h-[180px] w-[170px] md: " alt="sponsor imagone " />
+                  </div>
+                <div className=" font-bold ml-6"> 
+                <h1 className="text-2xl">{sponsor.name}</h1>
+                <p className="whitespace-wrap "> {sponsor.details}</p></div>
               </div>
-              <p className="whitespace-wrap m-1   "> {sponsor.details}</p>
+           
 
 
             </div>

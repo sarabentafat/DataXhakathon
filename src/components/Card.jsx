@@ -3,13 +3,13 @@ import dots from "../assets/dots.png";
 
 function Card(props) {
   return (
-    <div className="text-white  ">
-      <div className=" border-4 bg-[#00022F] border-[#219DFD]   w-[90%]  h-[800px]  md:h-[500px]  p-10  mb-5 mx-auto justify-center  rounded-[25px] ">
+    <div className="text-white   ">
+      <div className=" border-4 bg-[#00022F] border-[#219DFD] p-6  mb-5 justify-center rounded-3xl ">
         <img src={dots} alt="" className="w-[20%] " />
-        <h3 className="text-[#F7D121] lg:text-[35px] text-[30px] font-medium my-5">
+        <h3 className="text-[#F7D121]  text-3xl font-medium my-5">
           {props.title}
         </h3>
-        <p className="text-[25px] mb-7">{props.desc}</p>
+        <p className="text-2xl mb-7">{props.desc}</p>
       </div>
     </div>
   );

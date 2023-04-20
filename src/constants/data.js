@@ -16,7 +16,7 @@ export const mentors = [
   {
     id: 2,
     name: "sata ",
-    details: "Assistant Profddjd Professor at NYU Research Affiliate at MIT ",
+    details: "Assistant Profiliate at MIT ddjd Professor at NYU Research Aff ddjd Professor at NYU Research Aff ddjd Professor at NYU Research Aff",
     image: mentor2,
   },
   {
@@ -195,14 +195,14 @@ export const sponsors = [
   {
     id: 2,
     name: "cevital  ",
-    details: "ghamla nri djkjsfq",
+    details: "ghamla nri djkjsfqddjd Professor at NYU Research Aff",
     image:saa
   },
   {
     id: 1,
     name: "SAA ",
     details:
-      "assurance fjlk dhfkl  shfld  hlsf hkldshgf dskmf msjjf",
+      "assuf",
       image:saa
   },
 ]

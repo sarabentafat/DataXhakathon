@@ -1,5 +1,4 @@
 
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   borderRadius: {
@@ -13,11 +12,19 @@ module.exports = {
     extend: {
       colors:{
         bgColor:"#00022F",
+        form:"#B6B7C4"
       }  ,
         borderRadius: {
         'rcorners1': '49% 52% 47% 53% / 63% 55% 48% 40% ',
         'special2':'39% 58% 37% 46% / 40% 67% 32% 60% ',
       },
+      backgroundImage: {
+        'home': "url('./assets/home.png')",
+        'homi': "url('./assets/homi.png')",
+        'form':"url('./assets/bgForm.svg')",
+        'formi':"url('./assets/form2.svg')",
+        'blur':"url('./assets/blure.svg')"
+      }
       
     },
     screens: {
