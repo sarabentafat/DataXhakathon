@@ -10,7 +10,7 @@ import About from "./sections/About";
 function App() {
   return (
     <div className="bg-hero bg-no-repeat bg-contain
-      text-white float-none w-screen w-full overflow-hidden">
+      text-white float-none  w-full overflow-hidden">
 
       <BrowserRouter>
         <Routes>
